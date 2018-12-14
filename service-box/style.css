@@ -1,0 +1,119 @@
+
+.service-section {
+    display: flex;
+    background: #f9f9f9;
+    justify-content: center;
+}
+
+.single-service-box.bg-1 {
+    text-align: center;
+}
+.bg-1{
+    background-image:url(img/1.jpg);
+    width: 25%;
+}
+.bg-2{
+    background-image:url(img/2.jpg);
+    width: 25%;
+}
+.bg-3{
+    background-image:url(img/3.jpg);
+    width: 25%;
+}
+.bg-4{
+    background-image:url(img/4.jpg);
+    width: 25%;
+}
+.single-service-box {
+    background-size: cover;
+    background-position: center;
+}
+
+.service-table {}
+
+.service-table {
+    display: table;
+    /* width: 100%; */
+}
+
+.service-table-cell {
+    display: table-cell;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+text-align: center;
+vertical-align: middle;
+}
+
+.single-service-box {
+    position: relative;
+    z-index: 2;
+}
+.single-service-box p ,.single-service-box h3{
+    opacity: 0;
+    transition:1s;
+   
+}
+.single-service-box:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #000;
+    z-index: -1;
+    opacity: .5;
+}
+.single-service-box {
+    color: #fff;
+    font-family: cursive;
+    
+}
+
+.btn-service {
+    display: inline-block;
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 100px;
+    opacity: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.service-hover {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border: 2px solid;
+    border-color:red;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    opacity: 0;
+}
+.single-service-box:hover .service-hover {
+    width:90%;
+    height: 90%;
+    opacity: 1;
+}
+.single-service-box:hover .btn-service{
+    opacity: 1;
+    margin-top: 0px;
+}
+.single-service-box:hover P,h3{
+opacity: 1;
+}
